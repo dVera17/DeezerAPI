@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body-page{
+    width: 100%;
+    display: flex;
+}
+
+.container-leftNav{
+    width: 220px;
+    height: 90vh;
+    border-right: 1px solid #eaeaea;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: fixed;
+    background-color: #fff;
+}
+
+.main-navigation{
+    width: 100%;
+    height:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .6rem 1.5rem;
+    font-family: Deezer,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+a {
+    color: #0a0a16;
+    cursor: pointer;
+    outline: 0 none;
+    text-decoration: none;
+}
+
+.svg-icon {
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 0;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+header{
+    height: 56px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    min-width: 770px;
+    padding: 0 24px;
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    left: 220px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.formBuscador{
+    width: 500px;
+    height: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formBuscador input{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    height: 32px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+}
+
+.btn-search{
+    height: 100%;
+    border: none;
+    background: none;
+}
+
+main{
+    padding-top: 56px;
+    width: 80vw;
+    margin-left: 220px;
+}
+
+.container{
+    width: 100%;
+}
+
+.top-options{
+    padding-top: 48px;
+    display: flex;
+    align-items: center;
+    min-width: 770px;
+    width: 100%;
+    box-shadow: 0 2px 6px -4px rgba(25,25,34,.16);
+    padding-left: 24px;
+}
+
+.top-options a{
+    margin-right: 3rem;
+    font-size: 16px;
+    font-family: Deezer,Arial,sans-serif;
+    color: #52525D;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-bottom: 24px;
+}
+
+.top-options a:hover{
+    transition: 70ms;
+    border-bottom: 2px solid #191919;
+}
+
+.mejor-resultado{
+    border-bottom: 1px solid #eaeaea;
+    padding: 24px;
+    padding-top: 48px;
+}
+
+.svg-icon{
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 0;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.title h2{
+    font-family: Deezer,Arial,sans-serif;    
+    font-size: 22px;
+    padding-bottom: 24px;    
+}
+
+.img-mejorResultado figure{
+    border-radius: 50%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 6px rgba(25,25,34,.16);
+    box-shadow: 0 1px 6px rgba(25,25,34,.16);
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    vertical-align: top;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content-mejor-resultado{
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info-mejorResultado{
+    padding-left: 24px;
+}
+
+.heading-3{
+    font-size: 16px;
+    letter-spacing: .25px;
+    margin-bottom: 4px;
+    color: #191919;
+    font-weight: 400;
+}
+
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0;
+}
+
+.heading-3-sub{
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #52525D;
+}
+
+.sticker-default {
+    background-color: #32323d;
+}
+
+.sticker {
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding: 1px 6px;
+    vertical-align: top;
+    white-space: nowrap;
+    
+}
+
+.canciones, .albumes{
+    padding: 24px;
+    display: flex; 
+    flex-direction: column;
+}
+
+.encabezado{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    color: #191919;
+    height: 48px;
+    line-height: 20px;
+    padding: 8px;
+}
+
+.content-cancion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+.content-cancion:hover{
+    background-color: #eaeaea;
+}
+
+.column-1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column-other{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.encabezado p{
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    transition-property: color;
+}
+
+.contenido-tabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #191919;
+    height: auto;
+    line-height: 20px;
+    padding: 8px;
+    margin-top: 5px;
+    font-family: Deezer,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.left-cancion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-cancion p{
+    margin-left: 16px;
+    
+}
+
+.btnMicrofono{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.css-adf65k {
+    fill: none;
+    transform: translateY(-14.9435%);
+    height: 24px;
+    margin-top: 6px;
+}
+
+.css-1yk3h4a {
+    width: 16px;
+    height: 16px;
+    display: block;
+    line-height: 1em;
+    flex-shrink: 0;
+    color: currentcolor;
+    vertical-align: middle;
+    fill: currentcolor;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.card-ind figure{
+    height: 220px;
+    border-radius: 5px;
+}
+
+.card-ind figure:hover{
+    transition: .3s;
+    opacity: .8;
+}
+
+.card-ind figure img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.thumbnail-caption {
+    padding-top: 8px;
+}
+
+.heading-4{
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.thumbnail-caption .heading-4 {
+    line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.heading-4-sub{
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #52525D;
+    font-family: 'Maven Pro', sans-serif;
+    display: flex;
+}
+
+.thumbnail-caption .heading-4-sub, .thumbnail-caption .heading-5-sub {
+    line-height: 18px;
+    margin-bottom: 2px;
+    max-height: 35px;
+    overflow: hidden;
+}
+
+.player-controls{
+    display: flex;
+}
+
+.player-bottom {
+    width: 100%;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    bottom: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+    left: 0;
+    min-width: 990px;
+    padding: 0 24px;
+    position: fixed;
+    right: 0;
+    z-index: 300;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player-controls{
+    width: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-bottom button{
+    background: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25px;
+    position: relative;
+}
+
+.player-bottom button svg{
+    position: absolute;
+    width: 25px;
+}
+
+.player-bottom button:hover{
+    background-color: #eaeaea;  
+    height: 25px;
+}
+
+.player-controls figure{
+    opacity: .3;
+}
+
+.player-controls figure, button{
+    cursor: pointer;
+    height: 100%;
+    width: 20px;
+}
+
+.player-track{
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+}
+
+.contenedor-artistas{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.artits-direction{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.img-artist:hover{
+    opacity: .8;
+    transition: 300ms;
+}
