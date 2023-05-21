@@ -81,7 +81,10 @@ header{
     height: 32px;
     padding-left: 14px;
     padding-right: 14px;
+}
 
+.formBuscador input:focus{
+    outline: none;
 }
 
 .btn-search{
