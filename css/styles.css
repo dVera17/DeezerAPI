@@ -167,6 +167,13 @@ main{
     vertical-align: top;
     border-radius: 50%;
     overflow: hidden;
+    height: 162px;
+    width: 162px;
+}
+
+.img-mejorResultado figure img{
+    height: 100%;
+    width: 100%;
 }
 
 .content-mejor-resultado{
