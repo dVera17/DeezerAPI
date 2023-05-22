@@ -63,7 +63,7 @@ const showSongs = async (search) => {
         `;
         contenedorCanciones.appendChild(div);
     }    
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < dataAll.data.length; i++) {
         let btnAudioContainer = document.querySelector(`#btnAudio${i}`);
         btnAudioContainer.addEventListener('click', (e) => {
             e.preventDefault();
