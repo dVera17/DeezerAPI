@@ -1,8 +1,18 @@
 let search = document.querySelector('#search');
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault();
+    search.value = localStorage.getItem('searchValue');
+    showBestResult(search.value);
+    showSongs(search.value);
+    showAlbum(search.value);
+})
+
 let btnSearch = document.querySelector('#btnSearch');
-export let busqueda = search.value;
 btnSearch.addEventListener('click', (e) => {
     e.preventDefault();
+    let busqueda = search.value;
+    localStorage.setItem('searchValue', busqueda);
     showBestResult(busqueda);
     showSongs(busqueda);
     showAlbum(busqueda);
@@ -114,8 +124,10 @@ const calculateDuration = (duration) => {
 }
 
 const colocarAudio = async (index, search) => {
+    let nameSongPlaying = document.querySelector('#nameSongPlaying');
     let setAudio = document.querySelector('#setAudio');
     const dataAll = await getDataSearched(search);
+    nameSongPlaying.textContent = dataAll.data[index].title;
     setAudio.src = dataAll.data[parseInt(index)].preview;
     let btnPlay = document.querySelector('#btnPlay');
     btnPlay.addEventListener('click', (e) => {
