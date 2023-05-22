@@ -7,6 +7,7 @@
     <title>Canciones</title>
 
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/canciones.js" defer></script>
 </head>
 <body>
     <div class="body-page">
@@ -70,85 +71,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="contenido-tabla">
-                                <div class="content-cancion">
-                                    <div class="column-1">
-                                        <div class="left-cancion">
-                                            <figure>
-                                                <img src="https://e-cdns-images.dzcdn.net/images/cover/7ec62a0ca94701526db513fb6a140591/40x40-000000-80-0-0.jpg" alt="">
-                                            </figure>
-                                            <p>Como yo</p>
-                                        </div>
-                                        <div class="btn-microfono">
-                                            <button class="btnMicrofono">
-                                                <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="MicrophoneStandIcon" aria-hidden="true"><path d="M15 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0zm1 0a4.5 4.5 0 0 1-5.099 4.46L3.048 15 0 12l7-7.58v.08a4.5 4.5 0 1 1 9 0zM7.166 5.715l-5.774 6.252 1.736 1.71 6.57-5.053a4.511 4.511 0 0 1-2.532-2.91z"></path></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="column-other">
-                                        <div class="column-2">
-                                            <span>Juan Luis Guerra</span>
-                                        </div>
-                                        <div class="column-3">
-                                            <span>Si tu me quieres</span>
-                                        </div>
-                                        <div class="column-4">
-                                            <span>04:25</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-cancion">
-                                    <div class="column-1">
-                                        <div class="left-cancion">
-                                            <figure>
-                                                <img src="https://e-cdns-images.dzcdn.net/images/cover/7ec62a0ca94701526db513fb6a140591/40x40-000000-80-0-0.jpg" alt="">
-                                            </figure>
-                                            <p>Como yo</p>
-                                        </div>
-                                        <div class="btn-microfono">
-                                            <button class="btnMicrofono">
-                                                <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="MicrophoneStandIcon" aria-hidden="true"><path d="M15 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0zm1 0a4.5 4.5 0 0 1-5.099 4.46L3.048 15 0 12l7-7.58v.08a4.5 4.5 0 1 1 9 0zM7.166 5.715l-5.774 6.252 1.736 1.71 6.57-5.053a4.511 4.511 0 0 1-2.532-2.91z"></path></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="column-other">
-                                        <div class="column-2">
-                                            <span>Juan Luis Guerra</span>
-                                        </div>
-                                        <div class="column-3">
-                                            <span>Si tu me quieres</span>
-                                        </div>
-                                        <div class="column-4">
-                                            <span>04:25</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-cancion">
-                                    <div class="column-1">
-                                        <div class="left-cancion">
-                                            <figure>
-                                                <img src="https://e-cdns-images.dzcdn.net/images/cover/7ec62a0ca94701526db513fb6a140591/40x40-000000-80-0-0.jpg" alt="">
-                                            </figure>
-                                            <p>Como yo</p>
-                                        </div>
-                                        <div class="btn-microfono">
-                                            <button class="btnMicrofono">
-                                                <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="MicrophoneStandIcon" aria-hidden="true"><path d="M15 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0zm1 0a4.5 4.5 0 0 1-5.099 4.46L3.048 15 0 12l7-7.58v.08a4.5 4.5 0 1 1 9 0zM7.166 5.715l-5.774 6.252 1.736 1.71 6.57-5.053a4.511 4.511 0 0 1-2.532-2.91z"></path></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="column-other">
-                                        <div class="column-2">
-                                            <span>Juan Luis Guerra</span>
-                                        </div>
-                                        <div class="column-3">
-                                            <span>Si tu me quieres</span>
-                                        </div>
-                                        <div class="column-4">
-                                            <span>04:25</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="contenido-tabla" id="contenedorCanciones">
+                                
                             </div>
                         </div>
                     </div>
@@ -158,7 +82,7 @@
                             <figure>
                                 <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="StepBackwardIcon"><path d="M15 0v16L2 8.802V16H1V0h1v7.198L15 0z"></path></svg>
                             </figure>              
-                            <button>
+                            <button id="btnPlay">
                                 <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-c1x3e4 e3mndjk0" data-testid="PlayIcon"><path d="m3 1 12 7-12 7V1z"></path></svg>
                             </button>                 
                             <figure>
@@ -166,10 +90,12 @@
                             </figure>
                         </div>
                         <div class="player-track">
-                            <span>El Costo de la Vida</span>
+                            <span id="nameSongPlaying">El Costo de la Vida</span>
                         </div>
+                        <audio autoplay src="" id="setAudio">
+        
+                        </audio>
                     </div>
-
                 </div>
             </main>
         </div>

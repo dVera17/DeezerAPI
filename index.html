@@ -59,7 +59,7 @@
                             <div class="info-mejorResultado">
                                 <div class="heading-3 ellipsis"><a href="/es/artist/4527779"><span id="nameArtist">Juan Luis Guerra</span></a></div>
                                 <div class="heading-3-sub ellipsis"><span id="fansArtist">1.139.935 fans</span></div>
-                                <span class="sticker sticker-default">Artista</span>
+                                <span class="sticker sticker-default" id="type">Artista</span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                     <figure>
                         <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="StepBackwardIcon"><path d="M15 0v16L2 8.802V16H1V0h1v7.198L15 0z"></path></svg>
                     </figure>              
-                    <button>
+                    <button id="btnPlay">
                         <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-c1x3e4 e3mndjk0" data-testid="PlayIcon"><path d="m3 1 12 7-12 7V1z"></path></svg>
                     </button>                 
                     <figure>
@@ -113,8 +113,11 @@
                     </figure>
                 </div>
                 <div class="player-track">
-                    <span>El Costo de la Vida</span>
+                    <span id="nameSongPlaying">El Costo de la Vida</span>
                 </div>
+                <audio autoplay src="" id="setAudio">
+
+                </audio>
             </div>
         </div>
     </div>
