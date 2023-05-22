@@ -47,9 +47,9 @@ const showAllArtists = async (search) => {
                 <img src="${dataAll.data[i].artist.picture}" alt="">
             </figure>
         </div>
-        <div class="info-mejorResultado">
+        <div class="info-mejorResultado2">
             <div class="heading-3 ellipsis"><a href="#">${dataAll.data[i].artist.name}</a></div>
-            <div class="heading-3-sub ellipsis">${AllDataArtist.nb_fan}</div>
+            <div class="heading-3-sub ellipsis">${AllDataArtist.nb_fan} fans</div>
         </div>
         `;
         containerArtists.appendChild(div);

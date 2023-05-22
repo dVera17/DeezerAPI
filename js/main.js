@@ -45,7 +45,7 @@ const showBestResult = async (search) => {
     const infoArtist = await getInfoArtist(dataAll.data[0].artist.id)
     imgArtist.src = dataAll.data[0].artist.picture;
     nameArtist.textContent = dataAll.data[0].artist.name;
-    fansArtist.textContent = infoArtist.name;
+    fansArtist.textContent = infoArtist.nb_fan;
     type.textContent = dataAll.data[0].type;
 }
 
