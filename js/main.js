@@ -1,8 +1,8 @@
 let search = document.querySelector('#search');
 let btnSearch = document.querySelector('#btnSearch');
+export let busqueda = search.value;
 btnSearch.addEventListener('click', (e) => {
     e.preventDefault();
-    let busqueda = search.value;
     showBestResult(busqueda);
     showSongs(busqueda);
     showAlbum(busqueda);
@@ -30,11 +30,13 @@ const showBestResult = async (search) => {
     let imgArtist = document.querySelector('#imgArtist');
     let nameArtist = document.querySelector('#nameArtist');
     let fansArtist = document.querySelector('#fansArtist');
+    let type = document.querySelector('#type');
     const dataAll = await getDataSearched(search);
     const infoArtist = await getInfoArtist(dataAll.data[0].artist.id)
     imgArtist.src = dataAll.data[0].artist.picture;
     nameArtist.textContent = dataAll.data[0].artist.name;
     fansArtist.textContent = infoArtist.name;
+    type.textContent = dataAll.data[0].type;
 }
 
 const showSongs = async (search) => {
@@ -54,7 +56,7 @@ const showSongs = async (search) => {
                 <p>${dataAll.data[i].title}</p>
             </div>
             <div class="btn-microfono">
-                <button class="btnMicrofono" id="btnAudio">
+                <button class="btnMicrofono" id="btnAudio${i}" data-index="${i}">
                     <svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-1yk3h4a e3mndjk0" data-testid="MicrophoneStandIcon" aria-hidden="true"><path d="M15 4.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0zm1 0a4.5 4.5 0 0 1-5.099 4.46L3.048 15 0 12l7-7.58v.08a4.5 4.5 0 1 1 9 0zM7.166 5.715l-5.774 6.252 1.736 1.71 6.57-5.053a4.511 4.511 0 0 1-2.532-2.91z"></path></svg>
                 </button>
             </div>
@@ -73,6 +75,14 @@ const showSongs = async (search) => {
         `;
         contenedorCanciones.appendChild(div);
     }    
+    for (let i = 0; i < 6; i++) {
+        let btnAudioContainer = document.querySelector(`#btnAudio${i}`);
+        btnAudioContainer.addEventListener('click', (e) => {
+            e.preventDefault();
+            let index = btnAudioContainer.getAttribute('data-index');
+            colocarAudio(index, search);
+        });
+    }
 }
 
 const showAlbum = async (search) => {
@@ -101,4 +111,22 @@ const showAlbum = async (search) => {
 
 const calculateDuration = (duration) => {
     return (parseInt(duration)/60).toFixed(1);
+}
+
+const colocarAudio = async (index, search) => {
+    let setAudio = document.querySelector('#setAudio');
+    const dataAll = await getDataSearched(search);
+    setAudio.src = dataAll.data[parseInt(index)].preview;
+    let btnPlay = document.querySelector('#btnPlay');
+    btnPlay.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(setAudio.paused){
+            setAudio.play();
+            btnPlay.classList.add('playing');
+        }
+        else{
+            setAudio.pause();
+            btnPlay.classList.remove('playing');
+        }
+    })
 }
