@@ -263,6 +263,14 @@ main{
     align-items: center;
 }
 
+.column-2{
+    width: 30%;
+}
+
+.column-4{
+    width: 10%;
+}
+
 .column-3{
     width: 40%;
 }
@@ -470,7 +478,7 @@ main{
 
 .contenedor-artistas{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -483,4 +491,13 @@ main{
 .img-artist:hover{
     opacity: .8;
     transition: 300ms;
+}
+
+.info-mejorResultado2{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
 }
