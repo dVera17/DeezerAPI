@@ -2,7 +2,7 @@
 
 Aplicación web de Deezer
 
-Esta es una aplicación web que imita la funcionalidad de Deezer, una plataforma popular de streaming de música. Permite a los usuarios buscar canciones, álbumes y artistas, y escuchar pistas de música.
+Esta es una aplicación web que imita la funcionalidad de Deezer, una plataforma popular de streaming de música. Permite a los usuarios buscar canciones, álbumes y artistas, y escuchar pistas de música. Para colocar la canción presiona el microfono.
 
 Características
 - Buscar canciones, álbumes y artistas
